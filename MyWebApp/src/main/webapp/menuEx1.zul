@@ -1,0 +1,30 @@
+<?page title="menu1" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="menu1" border="normal">
+<!-- 	menubar 的 orient="vertical"  -->
+		<menubar id="menubar" orient="horizontal"> 
+			<menu label="File">
+				<menupopup>
+					<menuitem label="New" onClick="alert(self.label)" />
+					<menuitem label="Open" onClick="alert(self.label)" />
+					<menuitem label="Save" onClick="alert(self.label)" />
+					<menuseparator />
+					<menuitem label="Exit" onClick="alert(self.label)" />
+				</menupopup>
+			</menu>
+			<menu label="Help">
+				<menupopup>
+					<menuitem label="Index" onClick="alert(self.label)" />
+					<menu label="About">
+						<menupopup>
+							<menuitem label="About ZK"
+								onClick="alert(self.label)" />
+							<menuitem label="About Potix"
+								onClick="alert(self.label)" />
+						</menupopup>
+					</menu>
+				</menupopup>
+			</menu>
+		</menubar>
+	</window>
+</zk>

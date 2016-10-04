@@ -1,0 +1,20 @@
+<?page title="Welcome" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+<!-- <window id="topWindow" height="100%" apply="tw.com.provision.profep.web.system.compose.TopComposer"> -->
+<window id="topWindow" height="100%" 
+		apply="">	
+	<hlayout height="100%">
+		<div vflex="1" class="center-left">
+			<label value="${labels.top_welcome} ${$composer.contextPath}" />
+		</div>
+		<div hflex="7"/>
+		<div vflex="1" class="center-right">
+			<label value="${labels.top_userId}: ${$composer.userId}" />
+		</div>
+		<div vflex="1" class="center-right">
+			<label value="${labels.top_branchId}: ${$composer.branchId}" />
+		</div>
+	</hlayout>
+</window>
+</zk>

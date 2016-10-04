@@ -1,0 +1,62 @@
+<?page title="tree1" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="tree1" border="normal">
+	<zscript><![CDATA[//@DECLARATION
+       	public void showSelection(){
+//     		在 <label id="info"/> 設定被選中的值
+     		info.setValue("selected item " + tree.getSelectedItem().getLabel());
+//     		info.setValue("selected item " + tree.getSelectedItem().isOpen());
+     	}
+	
+		public void selectOpen(){
+     		if(!tree.getSelectedItem().isOpen())
+ 				tree.getSelectedItem().setOpen(true);
+ 			else
+ 				tree.getSelectedItem().setOpen(false);
+		}
+	]]>
+	</zscript>
+	<tree id="tree" rows="8" onSelect="showSelection()"  visible="true" >
+		<treecols sizable="true" >
+			<treecol label="Name" />
+			<treecol label="Description" />
+			<treecol label="測試" />
+		</treecols>
+		<treechildren >
+			<treeitem>
+				<treerow >
+					<treecell label="Item 1"  />
+					<treecell label="Item 1 description" />
+					<treecell label="Item 2 description" /> 
+				</treerow>
+			</treeitem>
+			<treeitem onClick="selectOpen()" open="false" >
+				<treerow>
+					<treecell label="Item 2" />
+					<treecell label="Item 2 description" />
+				</treerow>
+				<treechildren>
+					<treeitem onClick="selectOpen()" open="false">
+						<treerow>
+							<treecell label="Item 2.1" />
+						</treerow>
+						<treechildren>
+							<treeitem>
+								<treerow>
+									<treecell label="Item 2.1.1" />
+								</treerow>														</treeitem>
+							<treeitem >
+								<treerow>
+									<treecell label="Item 2.1.2" />
+								</treerow>
+							</treeitem>
+						</treechildren>
+					</treeitem>					
+				</treechildren>
+			</treeitem>
+			<treeitem label="Item 3" />			
+		</treechildren>
+	</tree>
+	<label id="info"/>
+</window>
+</zk>

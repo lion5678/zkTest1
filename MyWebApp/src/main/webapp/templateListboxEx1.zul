@@ -1,0 +1,16 @@
+<?page title="templateListbox" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window apply="foo.FruitProvider">
+		<listbox model="${$composer.fruits}"  >
+			<listhead>
+				<listheader label="Name" sort="auto" />
+				<listheader label="Weight" sort="auto" />
+			</listhead>
+				<listitem  >
+<!-- 					<listcell label="${each[0]}" /> -->
+<!-- 					<listcell label="${each[1]}" /> -->
+				</listitem>
+		</listbox>
+	</window>
+
+</zk>

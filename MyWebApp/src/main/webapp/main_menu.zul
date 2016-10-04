@@ -1,0 +1,30 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="main_menu.zul" border="normal">
+New Content Here!
+<tree>
+	<treecols>
+		<treecol label="name" />
+		<treecol label="Description" />
+	</treecols>
+	<treechildren>
+		<treeitem>
+			<treerow>
+				<treecell label="aa" />
+				<treecell></treecell>
+			</treerow>
+		</treeitem>
+	</treechildren>
+</tree>
+	<grid>
+		<columns>
+			<column label="grid_name"/>
+			<column label="grid_Description"/>
+		</columns>
+		<rows>
+			<row>	
+			</row>
+		</rows>
+	</grid>
+</window>
+</zk>

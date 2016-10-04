@@ -1,0 +1,18 @@
+<?page title="template" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<borderlayout hflex="1" vflex="1">
+		<north border="none" size="8%">
+			<include src="top.zul"/>
+		</north>
+<!-- 		<west  border="none" width="240px" autoscroll="true" flex="true">  -->
+<west autoscroll="true" maxsize="300" size="22%"  border="none" > 
+
+<!-- 			<include src="menu.zul" /> -->
+			<include src="/main_menu.zul"/>
+		</west>
+		<center id="mainContent" border="none"
+				autoscroll="true"
+                self="@insert(content)">
+        </center>
+	</borderlayout>
+</zk>
