@@ -1,0 +1,10 @@
+<?page title="listModel" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="listModel" border="normal" apply="com.xxx.modelcomposer.ListModelEx1">
+<grid model="${$composer.users}">
+<columns><column label="user" /><column label="pwd" /></columns>
+
+<template name="model"><row><cell><label value="${each.id}"></label></cell><cell><label value="${each.pwd }"></label></cell></row></template>
+</grid>
+</window>
+</zk>

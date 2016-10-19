@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk>
+	<!-- [Optional]
+	Uncomment if you want to defines the application's name 
+	
+	<preference>
+		<name>org.zkoss.zk.ui.WebApp.name</name>
+		<value>MyWebApp</value>
+	</preference>
+	-->
+	
+	<session-config>
+		<device-type>ajax</device-type>
+		<automatic-timeout /> <!-- the same as <automatic-timeout>true</automatic-timeout> -->
+<!-- 		<timeout-uri>/timeout.zul</timeout-uri> -->
+		<session-timeout>300</session-timeout>
+	</session-config>
+</zk>

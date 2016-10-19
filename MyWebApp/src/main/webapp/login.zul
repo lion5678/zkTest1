@@ -1,0 +1,33 @@
+<?page title="login_test11" contentType="text/html;charset=UTF-8"?>
+<zk>
+<include src="/style/tgwStyle.zul"/>
+	<div align="center" sclass="login_div">
+		<window  border="normal" width="300px" height="200px" apply="test1.LoginComposer">
+			<label value="${labels.login_welcome } ${pageContext.request.contextPath}" sclass="login_title" />
+			<label value="${labels.login_welcome } ${requestScope.contextPath}" />
+				<grid>
+					<columns>
+						<column width="30%"></column>
+						<column></column>
+					</columns>
+					<rows>
+						<row>
+							<label sclass="login_word">${labels.login_userId }</label>
+							<textbox id="userID" constraint="no empty"></textbox>
+						</row>
+						<row>
+							<label sclass="login_word">${labels.login_password }</label>
+							<textbox id="userPwd" constraint="no empty"
+								type="password">
+							</textbox>
+						</row>
+						<row><button label="${labels.login_loginBtn }" id="loginBtn"></button></row>
+					</rows>
+				</grid>
+					${$LoginComposer.aaa } <!-- 若有多個apply 可指定要取哪個，只有一個時可直接用$composer -->
+				<label id="mesg"></label>
+		</window>
+		${LOGIN_FORM.contextPath}
+		
+	</div>
+</zk>

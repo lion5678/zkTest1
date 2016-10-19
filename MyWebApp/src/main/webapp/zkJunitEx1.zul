@@ -1,0 +1,10 @@
+<?page title="zk_Ex1" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <window title="hello" border="normal" width="300px" apply="com.zk.junit.HelloComposer">
+        <label />
+        <button label="Hello" />
+    </window>
+    <script type="text/javascript">
+    	console.log("this is console.log")
+    </script>
+</zk>
