@@ -1,0 +1,38 @@
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+ 
+<window width="500px">
+    <zscript><![CDATA[
+        //prepare the example person
+        //com.model.Person selected = new com.model.Person();
+    ]]> 
+    </zscript>
+ 
+    <listbox rows="4" selectedItem="@{selected}" id="selected">
+        <listhead>
+            <listheader label="First Name" width="100px" />
+            <listheader label="Last Name" width="100px" />
+            <listheader label="Full Name" width="100px" />
+        </listhead>
+        <listitem>
+            <listcell label="George" />
+            <listcell label="Bush" />
+        </listitem>
+        <listitem>
+            <listcell label="Bill" />
+            <listcell label="Gates" />
+        </listitem>
+    </listbox>
+    <!-- show the detail of the selected person -->
+    <grid>
+        <rows>
+            <row>
+                First Name:
+                <textbox value="@{selected.firstName}"  />
+            </row>
+            <row>
+                Last Name:
+                <textbox value="@{selected.lastName}" />
+            </row>
+        </rows>
+    </grid>
+</window>

@@ -1,0 +1,49 @@
+<?page title="Data Binding" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" ?>
+<zk>
+	<window id="win" title="ZK Data Binding SAMPLE05" width="600px"
+		border="normal" closable="true" sizable="true" 
+		viewModel="@id('vm') @init('com.demo.composer.DataBindingEx1')">
+		<grid>
+			<columns sizable="true">
+				<column label="Type" sort="auto" width="200px" />
+				<column label="Content" width="360px" />
+			</columns>
+			<rows>
+				<row>
+					<label value="First Name :" />
+					<textbox id="txt_firstname" width="200px" value="@save(vm.person.firstName, before='setValue')"/>
+				</row>
+				<row>
+					<label value="Last Name :" />
+					<textbox id="txt_lastname" width="200px" value="@save(vm.person.lastName)"/>
+				</row>
+				<row>
+					<label value="Tel :" />
+					<textbox id="txt_tel" width="200px" />
+				</row>
+				<row>
+					<label value="Birthday :" />
+					<datebox id="dat_birthday" width="150px" />
+				</row>
+				<row>
+					<button id="btn_Submit" label="save" onClick="@command('setValue')"
+						width="150px" />
+					<button label="load" onClick="@command('getValue')"
+						width="150px" />
+				</row>
+				<row>
+					<label value="Last Name :" />
+					<label id="label"
+						value="@load(vm.person.firstName, after='getValue')" />
+				</row>
+			</rows>
+		</grid>
+		<separator />
+		<vbox>
+			<label value="Result : " />
+			<label id="lbl_info" />
+		</vbox>
+	</window>
+</zk>

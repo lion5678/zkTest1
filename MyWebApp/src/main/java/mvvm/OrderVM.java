@@ -36,7 +36,6 @@ public class OrderVM {
         return selectedCar;
     }
  
-     
     @Command
     @NotifyChange(value="carList")
     public void search(){
