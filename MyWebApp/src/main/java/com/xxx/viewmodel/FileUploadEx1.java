@@ -9,6 +9,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 
 import org.apache.commons.fileupload.FileUpload;
+import org.apache.log4j.Logger;
 import org.zkoss.bind.annotation.BindingParam;
 import org.zkoss.bind.annotation.Command;
 import org.zkoss.util.media.Media;
@@ -18,6 +19,7 @@ import org.zkoss.zul.Messagebox;
 
 public class FileUploadEx1 {
 
+	Logger log = Logger.getLogger(FileUploadEx1.class);
 	@Command
 	public void getFile(@BindingParam("upevent") UploadEvent e){
 		Media media = e.getMedia();
@@ -58,5 +60,18 @@ public class FileUploadEx1 {
 		System.out.println(media.getName());
 		System.out.println(media.getContentType());
 		
+	}
+	
+	@Command
+	public int checkBtnEvent(){
+		System.out.println(aa());
+		return 2;
+	}
+	
+	public int aa(){
+		return Messagebox
+	            .show(("Assignment function will be changed. Are you sure?"),
+	                    ("Confirm change"),
+	                    Messagebox.YES | Messagebox.NO, Messagebox.QUESTION);
 	}
 }

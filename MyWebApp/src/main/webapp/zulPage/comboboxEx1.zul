@@ -1,0 +1,14 @@
+<?page title="comboboxEx1" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="comboboxEx1" border="normal" apply="com.demo.composer.ComboboxComposer">
+	<combobox model="${$composer.listModel}">
+		
+	</combobox>
+	${$composer.listModel}
+<!-- 	<hlayout> -->
+<!-- 		<selectbox model="${$composer.listModel}"> -->
+<!-- 			<template name="model"><label value="${each}"/></template> -->
+<!-- 		</selectbox> -->
+<!-- 	</hlayout> -->
+</window>
+</zk>
